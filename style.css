@@ -1,0 +1,109 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width:100%;
+    height:100%;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    background-color: rgb(150, 170, 189);
+}
+.util {
+    position: absolute;
+    width: 100%;
+    top: 620px;
+    display: flex;
+    padding:0px 30px 0px 30px;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    padding:10px;
+}
+
+.draggable{
+    height:200px;
+    width:200px;
+    background-color: black;
+    z-index: 1;
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    cursor:grab;
+}
+.drop {
+    width: 600px;
+    height: 600px;
+    background-color:black;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: absolute;
+    right: 10px; 
+}
+.dropBox{
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.level{
+    width: calc(100% - 440px) ;
+    font-size: 24px;
+    font-weight: bold;
+}
+#level{
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin-left: 10px;
+}
+.guid-img{
+    width: 50px;
+    height: 50px;
+    transition: width 1s ,height 1s;
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+}
+
+.dropBox:hover{
+    background-color: gray;
+}
+.guid-img:hover {
+    width: 400px;
+    height: 400px;
+    z-index: 9999;
+}
+
+.message{
+    position: absolute;
+    transition: font-size 2s;
+}
+.win{
+    width: 100%;
+    text-align: center;
+    font-size: 200px;
+    font-weight: bold;
+    color: white;
+    background-color:rgb(61, 9, 46);
+    position: absolute;
+    z-index: 9999;
+    left: 50%;
+    max-height: 300px;
+    top: 25%;
+    transform: translate(-50%);
+    padding:30px;
+    animation-name: winning;
+    animation-duration: 4s;   
+}
+@keyframes winning {
+    12.5%  {background-color: rgba(12, 90, 12, 0.671);}
+    37.5%  {background-color: rgb(136, 7, 7);}
+    50%  {background-color: rgb(25, 14, 85);}
+    75%  {background-color: rgb(49, 8, 59);}
+    100% {background-color: rgb(80, 13, 45);}
+  }
+
